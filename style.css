@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: calc(100vh - 100px);
+}
+
+/* Левая секция с полем ввода */
+.input-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#phone-input {
+    width: 100%;
+    padding: 20px;
+    font-size: 32px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background: white;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+#client-dropdown {
+    list-style: none;
+    border: 2px solid black;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#client-dropdown li {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.1s;
+}
+
+#client-dropdown li:last-child {
+    border-bottom: none;
+}
+
+#client-dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Стилизация скроллбара */
+#client-dropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+#client-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#client-dropdown::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+#client-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Правая секция с клавиатурой */
+.keyboard-section {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+    align-content: start;
+}
+
+.key {
+    padding: 30px;
+    font-size: 28px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.key:active {
+    background-color: #f0f0f0;
+}
+
+.key.action {
+    background-color: #f0f0f0;
+}
+
+/* Кнопка оплаты */
+.pay-container {
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #ccc;
+}
+
+#pay-button {
+    padding: 20px 60px;
+    font-size: 24px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    border-radius: 8px;
+    min-width: 300px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#pay-button:active {
+    background-color: #f0f0f0;
+}
